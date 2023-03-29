@@ -19,11 +19,9 @@ pipeline{
             steps{
                 
                 script{
-                    sh export MAVEN_HOME=/opt/maven
-                    sh export PATH=$PATH:$MAVEN_HOME/bin
-                    sh mvn --version
-                    sh mvn clean package
+                    
                     sh 'mvn test'
+                    
                 }
             }
         }

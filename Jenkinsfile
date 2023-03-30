@@ -56,8 +56,8 @@ pipeline{
                 script{
                     
                     withSonarQubeEnv(credentialsId: 'sonar-api') {
-                        
-                        sh 'mvn clean package sonar:sonar'
+                       
+                        sh 'mvn clean package sonar:sonar -Dsonar.host.url=http://localhost:9000'
                     }
                    }
                     
